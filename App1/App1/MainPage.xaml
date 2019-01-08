@@ -6,9 +6,32 @@
 
     <StackLayout>
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Label x:Name="lblTitle" 
+               Text="Vítejte"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <Label x:Name="lblTitle2" 
+               Text="Nikdo vám nedá více..."
+               HorizontalOptions="Center"
+               VerticalOptions="End" />
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <StackLayout x:Name="parent"
+                         HorizontalOptions="CenterAndExpand"
+                         VerticalOptions="FillAndExpand"/>
+        </ScrollView>
+        <StackLayout HorizontalOptions="FillAndExpand">
+            <Grid x:Name="gridPass" Margin="30,0,30,0">
+                <Label Text="Napište kód:" Grid.Column="0" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                <Entry x:Name="editPass" Grid.Column="1"/>
+            </Grid>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Button Text="QR Kód" x:Name="btnQR" Clicked="BtnQR_Clicked"/>
+            <Button Text="Další"  x:Name="btnCode" Clicked="BtnCode_Clicked" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <Button Text="Poslat výsledek" x:Name="btnSubmit" Clicked="BtnSubmit_Clicked"/>
+
     </StackLayout>
 
 </ContentPage>

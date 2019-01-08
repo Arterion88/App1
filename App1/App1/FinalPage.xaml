@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.FinalPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label 
+                x:Name="lbl1"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Grid HorizontalOptions="CenterAndExpand" Margin="30, 0, 30 ,0">
+                <Label Text="Email: " Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Entry x:Name="editEmail" Grid.Column="1"/>
+            </Grid>
+            <Label 
+                Text="Odesláním vašeho emailu souhlasíte s následujícímí podmínky:"
+                HorizontalOptions="CenterAndExpand"
+                />
+            <ScrollView HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                <Frame BorderColor="Black">
+                    <Label></Label>
+                </Frame>
+            </ScrollView>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Zpět" x:Name="btnBack" Clicked="BtnBack_Clicked"/>
+                <Button Text="Odeslat e-mail" x:Name="btnSubmit" Clicked="BtnSubmit_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
