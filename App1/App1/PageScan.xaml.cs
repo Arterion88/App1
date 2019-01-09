@@ -68,9 +68,9 @@ namespace App1
 
         protected override void OnDisappearing()
         {
-            zxing.IsScanning = false;
-
             base.OnDisappearing();
+
+            zxing.IsScanning = false;
         }
     }
 }

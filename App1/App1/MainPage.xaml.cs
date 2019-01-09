@@ -39,44 +39,41 @@ namespace App1
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
 
-            stands.Add(new Stand("Stánek Hobby", "A1 66", "123456"));
-            stands.Add(new Stand("Stánek Fox", "C3 12", "654321", 5));
-            stands.Add(new Stand("Stánek Mivardi", "B4 35", "mivardi", 2));
+            stands.Add(new Stand("Hobby", "hobby"));
+            stands.Add(new Stand("Fox", "fox", 5));
+            stands.Add(new Stand("Mivardi", "mivardi", 2));
+            stands.Add(new Stand("Dam", "dam",9));
+            stands.Add(new Stand("Egerfish", "egerfish",2));
+            stands.Add(new Stand("Saenger", "saenger",7));
+            stands.Add(new Stand("Nikl", "nikl",5));
+            stands.Add(new Stand("Mikado", "mikado",3));
+            stands.Add(new Stand("Mikbaits", "mikbaits",6));
+            stands.Add(new Stand("Mivardi", "mivardi",8));
+            stands.Add(new Stand("Moss", "moss",4));
+            stands.Add(new Stand("Normark", "normark",10));
+            stands.Add(new Stand("Stormkloth", "Stormkloth",6));
+            stands.Add(new Stand("Slovimex", "slovimex",2));
+            stands.Add(new Stand("Svendsen", "svendsen",3));
 
-                string[] array = Settings.Stands.Split(';');
+
+            string[] array = Settings.Stands.Split(';');
                 for (int i = 0; i < array.Length; i++)
                     if (int.TryParse(array[i], out int result))
                         stands[result].Visited = true;
 
+            this.BackgroundColor = Settings.BackgroundColor;
             Show();
         }
 
         private void Show()
         {
-            btnQR.IsVisible = (index == 1) && Settings.Permission;
-            gridPass.IsVisible = index == 1;
-            lblTitle.IsVisible = index == 0;
-            btnQR.IsVisible = index == 1;
-            parent.IsVisible = index == 1;
-            btnSubmit.IsVisible = index == 1;
+            btnQR.IsVisible = Settings.Permission;
 
-            switch (index)
-            {
-                case 0:
-                    lblTitle2.Text = "Nikdo vám nedá více..";
-                    btnCode.Text = "Další";
-                    break;
-                case 1:
-                    lblTitle2.Text = "Celkově bodů: " + ClearedPoints+" / "+ GetTotalPoints();
-                    editPass.Text = "";
-                    btnCode.Text = "Vložit kód";
-                    parent.Children.Clear();  
-                    foreach (Stand stand in stands)
-                    {
-                        parent.Children.Add(stand.GetStackLayout());
-                    }       
-                    break;
-            }
+            lblTitle2.Text = "Celkově bodů: " + ClearedPoints + " / " + GetTotalPoints();
+            
+            parent.Children.Clear();
+            foreach (Stand stand in stands)
+                parent.Children.Add(stand.GetStackLayout());               
         }
 
         public void CheckCode(string result)

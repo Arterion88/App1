@@ -2,12 +2,18 @@
 using Plugin.Settings.Abstractions;
 using System;
 using System.Collections.Generic;
+
 using System.Text;
+using Xamarin.Forms;
 
 namespace App1
 {
     public static class Settings
     {
+        public static Color BackgroundColor { get { return Color.LightBlue; } }
+
+
+        #region Saveable
         private static ISettings AppSettings
         {
             get
@@ -20,12 +26,11 @@ namespace App1
 
         private static readonly string SettingsDefault = string.Empty;
         private const string KeyStands = "stands";
-        
+
 
         private const string KeyPermission = "permission";
 
         #endregion
-
 
         public static string Stands
         {
@@ -49,7 +54,8 @@ namespace App1
             {
                 AppSettings.AddOrUpdateValue(KeyPermission, value);
             }
-        }
+        } 
 
+        #endregion
     }
 }

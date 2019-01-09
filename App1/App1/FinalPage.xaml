@@ -6,20 +6,37 @@
         <StackLayout>
             <Label 
                 x:Name="lbl1"
+                Margin="10,10,10,10"   
                 HorizontalTextAlignment="Center"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
-            <Grid HorizontalOptions="CenterAndExpand" Margin="30, 0, 30 ,0">
-                <Label Text="Email: " Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="editEmail" Grid.Column="1"/>
-            </Grid>
-            <Label 
+            <!--<Grid HorizontalOptions="CenterAndExpand" Margin="30, 30, 30 ,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+
+                </Grid.ColumnDefinitions>
+                <Label Text="Email:" Grid.Column="0" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                <Entry x:Name="editPass" Grid.Column="1"/>
+            </Grid>-->
+            <Label
+                Margin="10,10,10,10"    
                 Text="Odesláním vašeho emailu souhlasíte s následujícímí podmínky:"
                 HorizontalOptions="CenterAndExpand"
                 />
             <ScrollView HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
-                <Frame BorderColor="Black">
-                    <Label></Label>
+                <Frame HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                    <Label>Lorem ipsum dolor sit amet consectetuer dui justo et at Phasellus. Non pulvinar ut Nam Ut ut accumsan elit sollicitudin lacinia sed. Leo risus Maecenas eget tempus semper metus felis elit Donec ac. Odio scelerisque ut lacus orci Vestibulum accumsan et sit adipiscing Ut. Congue pellentesque libero mauris sit tempus dui parturient tincidunt tempus sagittis. Morbi pretium rutrum Vestibulum molestie Ut Vivamus tincidunt.
+
+Lacus vel adipiscing nibh tincidunt sapien eget consequat eu convallis magna. Sagittis Nam et augue elit ornare Ut elit Vestibulum turpis tincidunt. Nulla Pellentesque In quis Pellentesque ut Nam lorem ante sem Cras. In Maecenas leo wisi elit adipiscing vel ut non ultrices scelerisque. Condimentum id id libero amet orci consectetuer Vestibulum Integer id tempus. Fusce.
+
+Quis tempus convallis senectus nunc at orci mauris ut justo quis. Curabitur malesuada lacus Integer felis nunc mauris id sem et In. Sociis justo nibh quis nulla non interdum vel magnis auctor Vestibulum. Condimentum Nam faucibus Nunc Lorem pretium gravida consequat adipiscing ultrices fames. Nam ut dictum in cursus libero vitae ac Nullam.
+
+Libero ut et augue dui semper vitae cursus elit cursus et. Nulla quis Phasellus wisi enim auctor ut ipsum at vel ridiculus. Cursus Cum massa condimentum morbi non vitae non Vivamus Vestibulum auctor. Dui consequat sodales ac cursus neque Sed et tristique porttitor faucibus. Nulla sem ut Ut dolor Phasellus Ut mauris mi congue Aenean. Metus Vestibulum et et consectetuer gravida tellus lacus massa felis neque. Fringilla id augue.
+
+Vel Nam Nulla quis eget cursus pretium vitae diam Phasellus neque. Scelerisque orci dui odio eget tincidunt Aliquam id id Nam eros. Vitae et nonummy id pede nunc Ut tempus ut accumsan purus. Nibh dui non turpis penatibus hendrerit turpis dapibus nibh pretium diam. Convallis tincidunt turpis sed a enim mattis ipsum Praesent wisi ullamcorper. Vitae tellus Sed nec volutpat.
+
+                    </Label>
                 </Frame>
             </ScrollView>
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">

@@ -5,19 +5,15 @@
              x:Class="App1.MainPage">
 
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label x:Name="lblTitle" 
-               Text="Vítejte"
-               HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />
+        <!-- Place new controls here -->       
         <Label x:Name="lblTitle2" 
-               Text="Nikdo vám nedá více..."
-               HorizontalOptions="Center"
-               VerticalOptions="End" />
-        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-            <StackLayout x:Name="parent"
+               HorizontalOptions="Center"/>
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
+            <Frame>
+                <StackLayout x:Name="parent"
                          HorizontalOptions="CenterAndExpand"
                          VerticalOptions="FillAndExpand"/>
+            </Frame>
         </ScrollView>
         <StackLayout HorizontalOptions="FillAndExpand">
             <Grid x:Name="gridPass" Margin="30,0,30,0">
@@ -27,8 +23,8 @@
         </StackLayout>
 
         <StackLayout Orientation="Horizontal">
-            <Button Text="QR Kód" x:Name="btnQR" Clicked="BtnQR_Clicked"/>
-            <Button Text="Další"  x:Name="btnCode" Clicked="BtnCode_Clicked" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Scan" x:Name="btnQR" Clicked="BtnQR_Clicked"/>
+            <Button Text="Vložit kód"  x:Name="btnCode" Clicked="BtnCode_Clicked" VerticalOptions="End" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
         <Button Text="Poslat výsledek" x:Name="btnSubmit" Clicked="BtnSubmit_Clicked"/>
 
