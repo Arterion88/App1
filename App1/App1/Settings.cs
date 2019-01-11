@@ -11,7 +11,7 @@ namespace App1
     public static class Settings
     {
         public static Color BackgroundColor { get { return Color.LightBlue; } }
-
+        public static Event CurrentEvent { get; set; }
 
         #region Saveable
         private static ISettings AppSettings
@@ -26,9 +26,8 @@ namespace App1
 
         private static readonly string SettingsDefault = string.Empty;
         private const string KeyStands = "stands";
-
-
         private const string KeyPermission = "permission";
+        private const string KeyFinishedEvents = "finishedevents";
 
         #endregion
 
@@ -41,6 +40,18 @@ namespace App1
             set
             {
                 AppSettings.AddOrUpdateValue(KeyStands, value);
+            }
+        }
+
+        public static string FinishedEvents
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault(KeyFinishedEvents, SettingsDefault);
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue(KeyFinishedEvents, value);
             }
         }
 

@@ -7,6 +7,7 @@
     <StackLayout>
         <!-- Place new controls here -->       
         <Label x:Name="lblTitle2" 
+               Margin="0,20,0,0"
                HorizontalOptions="Center"/>
         <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="10,0,10,0">
             <Frame>
@@ -15,10 +16,10 @@
                          VerticalOptions="FillAndExpand"/>
             </Frame>
         </ScrollView>
-        <StackLayout HorizontalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
             <Grid x:Name="gridPass" Margin="30,0,30,0">
-                <Label Text="Napište kód:" Grid.Column="0" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
-                <Entry x:Name="editPass" Grid.Column="1"/>
+                <Label Text="Napište kód:" Grid.Column="0" HorizontalOptions="Start" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                <Entry x:Name="editPass" Grid.Column="1" HorizontalOptions="FillAndExpand"/>
             </Grid>
         </StackLayout>
 
